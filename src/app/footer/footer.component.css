@@ -1,9 +1,9 @@
 .footer-blue-bg {
-    background-color: navy;
+    background-color: #0DA1E1;
 }
 
 .footer-text-black {
-    color: white; /* Cambié a blanco para mejor contraste */
+    color: black; /* Cambié a blanco para mejor contraste */
 }
 
 .footer-link:hover {

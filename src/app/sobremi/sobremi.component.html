@@ -1,8 +1,10 @@
 <section id="sobremi" class="bg-black text-white dark:bg-gray-900 dark:text-white">
     <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
-        <div class="mx-auto max-w-screen-sm text-center mb-4 lg:mb-8">
+        <div class="mx-auto max-w-screen-sm text-center mb-4 lg:mb-8 max-w-4xl px-4 sm:px-4 lg:px-6">
             <h2 class="mb-2 text-4xl tracking-tight font-extrabold text-white dark:text-white">Sobre mi</h2>
-            <p class="font-light text-gray-300 sm:text-xl dark:text-gray-400 mb-4">Explore the whole collection of open-source web components and elements built with the utility classes from Tailwind</p>
+            <p class="font-light text-gray-300 sm:text-xl dark:text-gray-400 mb-4">
+                ¡Hola! Soy Sunim Mojardin, una apasionada programadora con tres años de estudio universitario en el campo del desarrollo de software. Además de mis habilidades técnicas en programación, también tengo experiencia en diseño, tareas administrativas y poseo un carisma natural que me ayuda a conectar con las personas.
+                 </p>
             <div class="border-b border-gray-200 dark:border-gray-700 flex justify-center mb-2">
                 <ul class="flex flex-wrap -mb-px text-sm font-medium text-center" id="default-styled-tab" data-tabs-toggle="#default-styled-tab-content" data-tabs-active-classes="text-purple-600 hover:text-purple-600 dark:text-purple-500 dark:hover:text-purple-500 border-purple-600 dark:border-purple-500" data-tabs-inactive-classes="dark:border-transparent text-gray-400 hover:text-gray-500 dark:hover:text-gray-300 border-gray-100 hover:border-gray-300 dark:border-gray-700" role="tablist">
                     <li class="me-2" role="presentation">
@@ -23,39 +25,30 @@
             <div id="default-styled-tab-content">
                 <div class="hidden p-4 rounded-lg " id="styled-profile" role="tabpanel" aria-labelledby="profile-tab">
                     <strong class="font-medium text-white dark:text-white" >
-                        <li *ngFor="let Skill of Skill$ | async">
-                        {{ Skill.name }}
-                      </li></strong>
+                        <span *ngFor="let Skill of Skill$ | async" class="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{ Skill.name }}</span>
+                       </strong>
                 </div>
-                <div class="hidden p-4 rounded-lg " id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
-                        <strong class="font-medium text-white dark:text-white"> 
-                            <li *ngFor="let Softskill of Softskill$ | async">
-                            {{ Softskill.name }}
-                          </li></strong>
-                </div>
+                <div class="hidden p-4 rounded-lg" id="styled-dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <span class="font-medium text-white dark:text-white list-inside"> <!-- Aplicamos estilos para alinear la lista a la izquierda -->
+                        <span *ngFor="let Softskill of Softskill$ | async" class="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{ Softskill.name }}</span>
+                    </span>
+                </div>                
                 <div class="hidden p-4 rounded-lg " id="styled-settings" role="tabpanel" aria-labelledby="settings-tab">
                     <strong class="font-medium text-white dark:text-white">
-                        <li *ngFor="let Educacion of Educacion$ | async">
-                        {{ Educacion.name }}
-                      </li></strong>
+                        <span *ngFor="let Educacion of Educacion$ | async" class="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{ Educacion.name }}</span>
+               </strong>
                 </div>
                 <div class="hidden p-4 rounded-lg " id="styled-contacts" role="tabpanel" aria-labelledby="contacts-tab">
                     <strong class="font-medium text-white dark:text-white">
-                        <li *ngFor="let Certificado of Certificado$ | async">
-                        {{ Certificado.name }}
-                      </li></strong>
+                        <span *ngFor="let Certificado of Certificado$ | async" class="bg-indigo-100 text-indigo-800 text-sm font-medium me-2 px-2.5 py-0.5 rounded dark:bg-indigo-900 dark:text-indigo-300">{{ Certificado.name }}</span>
+                        </strong>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- 
-<ul>
-      <li *ngFor="let Skill of Skill$ | async">
-        {{ Skill.name }}
-      </li>
-  </ul> -->
+
 
 
 

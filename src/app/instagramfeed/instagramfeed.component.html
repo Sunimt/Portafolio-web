@@ -1,0 +1,14 @@
+<div class="bg-black text-white py-8">
+  <div class="photo-gallery">
+    <div class="gallery-inner">
+      <div class="gallery-item" *ngFor="let media of mediaList">
+        <img [src]="media.media_url" alt="Instagram Photo">
+      </div>
+    </div>
+  </div>
+  <div class="controls">
+    <button class="prev" (click)="scrollGallery('left')">&#10094;</button>
+    <button class="next" (click)="scrollGallery('right')">&#10095;</button>
+  </div>
+
+</div>

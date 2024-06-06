@@ -4,10 +4,12 @@ import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
 import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
 import { getFirestore, provideFirestore } from '@angular/fire/firestore';
+import { provideHttpClient } from '@angular/common/http';
 
 
 export const appConfig: ApplicationConfig = {
   providers: [provideRouter(routes),
+    provideHttpClient(),
      provideClientHydration(),
       provideFirebaseApp(() => 
       initializeApp({  

@@ -5,6 +5,7 @@ import { Observable } from 'rxjs';
 import { Firestore, collection, collectionData } from '@angular/fire/firestore';
 
 
+
 interface Skill {
   name: string,
 };

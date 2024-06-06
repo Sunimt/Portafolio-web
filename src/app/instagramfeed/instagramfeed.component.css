@@ -1,0 +1,71 @@
+.container {
+  width: 100%;
+  overflow: hidden; /* Oculta el desbordamiento horizontal */
+}
+
+.photo-gallery {
+  display: flex;
+  overflow-x: auto; /* Permite desplazamiento horizontal */
+  scroll-snap-type: x mandatory; /* Hace que el desplazamiento se detenga en cada imagen */
+}
+
+.gallery-inner {
+  display: flex;
+  flex-wrap: nowrap; /* Evita que las imágenes se envuelvan */
+}
+
+.gallery-item {
+  flex: 0 0 auto; /* Evita que las imágenes se estiren */
+  scroll-snap-align: start; /* Alinea cada imagen con el inicio del contenedor */
+}
+
+.gallery-item img {
+  max-width: 100%; /* Ajusta el ancho máximo de las imágenes al 100% del contenedor */
+  height: auto; /* Mantiene la proporción de aspecto */
+  max-height: 200px; /* Ajusta la altura máxima de las imágenes según sea necesario */
+}
+
+
+.controls {
+  position: relative;
+}
+
+.controls button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 2em;
+  background: transparent;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.controls .prev {
+  left: 10px;
+}
+
+.controls .next {
+  right: 10px;
+}
+
+/* Estilo para el scrollbar en navegadores webkit */
+.photo-gallery::-webkit-scrollbar {
+  width: 10px; /* Ancho del scrollbar */
+}
+
+/* Estilo para el track del scrollbar */
+.photo-gallery::-webkit-scrollbar-track {
+  background: transparent; /* Color de fondo del track */
+}
+
+/* Estilo para el thumb (barra deslizante) del scrollbar */
+.photo-gallery::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.5); /* Color del thumb */
+  border-radius: 5px; /* Borde redondeado del thumb */
+}
+
+/* Estilo para el thumb cuando se encuentra en hover */
+.photo-gallery::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.7); /* Color del thumb en hover */
+}
