@@ -1,0 +1,11 @@
+.footer-blue-bg {
+    background-color: #0DA1E1;
+}
+
+.footer-text-black {
+    color: black; /* Cambié a blanco para mejor contraste */
+}
+
+.footer-link:hover {
+    text-decoration: underline;
+}

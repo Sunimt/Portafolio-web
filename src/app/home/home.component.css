@@ -1,0 +1,18 @@
+
+.animated-background {
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: overlay; /* This blends the gradient and the image */
+    
+}
+
+@keyframes animation {
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+    
+    50% {
+        background-position: 100% 50%;
+    }
+}
