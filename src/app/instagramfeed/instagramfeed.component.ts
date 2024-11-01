@@ -22,12 +22,6 @@ export class InstagramfeedComponent {
 
   constructor(private instagramService: InstagramService) { }
 
-  fetchProfile() {
-    this.instagramService.getProfile().subscribe((profileData: any) => {
-      this.profile = profileData;
-      this.fetchMedia();
-    });
-  }
   
 
   fetchMedia() {
