@@ -22,16 +22,10 @@ export class InstagramfeedComponent {
 
   constructor(private instagramService: InstagramService) { }
 
-  fetchProfile() {
-    this.instagramService.getProfile().subscribe((profileData: any) => {
-      this.profile = profileData;
-      this.fetchMedia();
-    });
-  }
   
 
   fetchMedia() {
-    const url = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&access_token=${this.instagramService.accessToken}`;
+    const url = `https://graph.instagram.com/me/media?fields=id,media_type,media_url&access_token=${this.instagramService}`;
     this.instagramService.fetchMedia(url).subscribe(mediaData => {
       this.mediaList = mediaData.data;
     });

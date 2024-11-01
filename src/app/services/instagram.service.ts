@@ -7,16 +7,9 @@ import { Observable, catchError, throwError } from 'rxjs';
 })
 export class InstagramService {
   private apiUrl = 'https://graph.instagram.com';
-  public accessToken = 'IGQWROMlc0WEs2ZAlBsdVZAqR0NHejZAZAR2ZASSG5mZA3p3UVBzazF1Qk10a2kwckVJOEJKZAWQzaDFuRjRaa1ZADMkxqR1BVTXRKYnNKTUlkdWtDVS1RNGY5eHdUVjBCV3pSRk9JeUhicmpocmJFYVU0bWt4clU5YUxQbVEZD'; // Reemplaza con tu token de acceso
+
 
   constructor(private http: HttpClient) { }
-
-  getProfile(): Observable<any> {
-    const url = `https://graph.instagram.com/me?fields=id,username,media_count&access_token=${this.accessToken}`;
-    return this.http.get(url).pipe(
-      catchError(this.handleError)
-    );
-  }
 
   fetchMedia(url: string): Observable<any> {
     return this.http.get(url).pipe(
