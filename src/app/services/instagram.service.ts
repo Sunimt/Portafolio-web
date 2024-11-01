@@ -7,7 +7,7 @@ import { Observable, catchError, throwError } from 'rxjs';
 })
 export class InstagramService {
   private apiUrl = 'https://graph.instagram.com';
-  public accessToken = 'IGQWRPT045dWdaRTRuVUNmbGI3TzhacVVvcnY1Q1dZAaXlUalVsb0RvMTA1blpZAbUlLNFEzYld3M2FGeERvLUd0eGFlU1FZAc2FnZAXVkMkROQlNaQTZAYUnR2N3M1d01RYjcxc3pzb000STc0NWt6T3VfUVROeXBkaEUZD'; // Reemplaza con tu token de acceso
+
 
   constructor(private http: HttpClient) { }
 
