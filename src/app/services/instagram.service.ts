@@ -11,13 +11,6 @@ export class InstagramService {
 
   constructor(private http: HttpClient) { }
 
-  getProfile(): Observable<any> {
-    const url = `https://graph.instagram.com/me?fields=id,username,media_count&access_token=${this.accessToken}`;
-    return this.http.get(url).pipe(
-      catchError(this.handleError)
-    );
-  }
-
   fetchMedia(url: string): Observable<any> {
     return this.http.get(url).pipe(
       catchError(this.handleError)
